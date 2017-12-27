@@ -1,9 +1,8 @@
-requirejs(['js/controllers/zoo', 'js/model/animal', 'js/model/bear', 'js/model/cow'], zoo => {
+requirejs(['js/controllers/zoo', 'js/model/bear', 'js/model/cow'], (zoo, Bear, Cow) => {
     let bear = new Bear();
     let cow = new Cow();
 
     bear.right().right().up().up();
-    console.log('position: ', bear.position);
     bear.growl();
     cow.mooh();
 
