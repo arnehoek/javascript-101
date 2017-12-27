@@ -3,4 +3,8 @@ class Cow extends Animal {
         super();
         console.log('we created a cow');
     }
+
+    mooh() {
+        console.log('Mooh');
+    }
 }
