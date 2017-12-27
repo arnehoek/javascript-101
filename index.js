@@ -6,8 +6,9 @@ requirejs(['js/controllers/zoo', 'js/model/bear', 'js/model/cow'], (zoo, Bear, C
     bear.growl();
     cow.mooh();
 
-    zoo.addAnimal(bear);
+    zoo.addAnimal(bear, {onCollision: bear.growl});
     zoo.addAnimal(cow);
 
-    cow.left().down();
+    cow.left().down().right().right().up();
+    bear.down().down().left();
 });
