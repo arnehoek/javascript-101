@@ -6,18 +6,22 @@ class Animal {
 
     left() {
         this._position[0]--;
+        return this;
     }
 
     right() {
         this._position[0]++;
+        return this;
     }
 
     up() {
         this._position[1]++;
+        return this;
     }
 
     down() {
         this._position[1]--;
+        return this;
     }
 
     get position() {
