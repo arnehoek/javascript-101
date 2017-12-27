@@ -1,6 +1,7 @@
 class Zoo {
-    constructor() {
+    constructor(logger) {
         this._animals = [];
+        this.logger = logger;
     }
 
     addAnimal(animal, options = {onCollision: null}) {
@@ -11,10 +12,10 @@ class Zoo {
 
         this._animals.push(newZooAnimal);
 
-        console.log('zoo contains ', this._animals.map(zooAnimal => zooAnimal.animal));
+        document.querySelector('.animal-overview').innerHTML = `Zoo contains: <br> ${this._animals.map(zooAnimal => `${zooAnimal.animal.name} @ ${zooAnimal.animal.position}<br>`)}`;
 
         animal.movements.subscribe(position => {
-            console.log(`in the zoo, ${animal.name} walked to `, position);
+            this.logger.log(`in the zoo, ${animal.name} walked to [${position}]`);
 
             let collidesWith = this.collidesWith(newZooAnimal);
             if (collidesWith.length > 0) {

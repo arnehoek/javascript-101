@@ -1,12 +1,12 @@
-define(['./animal'], (Animal) => {
+define(['./animal', '../controllers/logger'], (Animal, logger) => {
     return class Cow extends Animal {
         constructor(name) {
-            super(name);
-            console.log('we created a cow');
+            super(name, logger);
+            logger.log('we created a cow');
         }
 
         mooh() {
-            console.log('Mooh');
+            logger.log('Mooh');
         }
     }
 });

@@ -1,3 +1,3 @@
-define(['../model/zoo'], () => {
-    return new Zoo();
+define(['./logger', '../model/zoo'], (logger) => {
+    return new Zoo(logger);
 });

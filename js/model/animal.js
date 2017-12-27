@@ -1,7 +1,7 @@
-define(['../helpers/subject'], () => {
+define(['../controllers/logger', '../helpers/subject'], (logger) => {
     return class Animal {
         constructor(name) {
-            console.log('we created an animal');
+            logger.log('we created an animal');
             this._position = [0, 0];
             this._movements = new Subject();
             this._name = name;
