@@ -1,7 +1,7 @@
 define(['./animal'], (Animal) => {
     return class Bear extends Animal {
-        constructor() {
-            super();
+        constructor(name) {
+            super(name);
             console.log('we created a bear');
         }
 

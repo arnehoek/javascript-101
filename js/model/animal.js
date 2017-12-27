@@ -1,9 +1,10 @@
 define(['../helpers/subject'], () => {
     return class Animal {
-        constructor() {
+        constructor(name) {
             console.log('we created an animal');
             this._position = [0, 0];
             this._movements = new Subject();
+            this._name = name;
         }
 
         left() {
@@ -36,6 +37,10 @@ define(['../helpers/subject'], () => {
 
         get movements() {
             return this._movements;
+        }
+
+        get name() {
+            return this._name;
         }
     }
 });
