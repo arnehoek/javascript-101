@@ -1,2 +1,2 @@
-let animal = new Animal();
-let bear = new Bear();
+var animal = new Animal();
+var bear = new Bear();
