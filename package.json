@@ -1,0 +1,26 @@
+{
+  "name": "javascript-101",
+  "version": "1.0.0",
+  "description": "javascript training",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arnehoek/javascript-101.git"
+  },
+  "keywords": [
+    "javascript",
+    "zoo"
+  ],
+  "author": "A. Hoek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arnehoek/javascript-101/issues"
+  },
+  "homepage": "https://github.com/arnehoek/javascript-101#readme",
+  "dependencies": {
+    "requirejs": "^2.3.5"
+  }
+}
