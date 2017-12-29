@@ -25,7 +25,7 @@ class Zoo {
 
     handleCollision(zooAnimals) {
         zooAnimals.forEach(zooAnimal => {
-            if (zooAnimal.options != null && zooAnimal.options.onCollision != null) {
+            if (zooAnimal.options.onCollision != null) {
                zooAnimal.options.onCollision();
             }
         })
